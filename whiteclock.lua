@@ -24,7 +24,7 @@ function new(args, format, timeout)
     args.type = "textbox"
     local w = capi.widget(args)
     local timer = capi.timer { timeout = timeout }
-    w.text = os.date(format)
+    w.text = "<span color=\"#ffffff\">" .. os.date(format) .. "</span>"
     timer:add_signal("timeout", function() w.text = "<span color=\"#ffffff\">" .. os.date(format) .. "</span>"  end)
     timer:start()
     return w
