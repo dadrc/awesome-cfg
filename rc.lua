@@ -114,45 +114,33 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = whiteclock()
-mytextclock.bg = beautiful.grey
+mytextclock.bg = beautiful.agrey
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
 updatebox = widget({ type = "textbox", name = "updatebox"})
 updatebox.text = '<span color="#ffffff">— </span>'
-updatebox.bg = beautiful.grey
-
-songbox = widget({ type = "textbox", name = "songbox"})
-songbox.text = '<span color="#ffffff">■ </span>'
-songbox.bg = beautiful.dgreen
+updatebox.bg = beautiful.agrey
 
 tempbox = widget({ type = "textbox", name = "tempbox"})
 tempbox.text = '<span color="#ffffff">— </span>'
-tempbox.bg = beautiful.purple
+tempbox.bg = beautiful.orange
+
+songbox = widget({ type = "textbox", name = "songbox"})
+songbox.text = '<span color="#ffffff">■ </span>'
+songbox.bg = beautiful.lblue
 
 arr1 = widget ({type = "imagebox" })
-arr1.image = image(beautiful.arr_bg_grey)
+arr1.image = image(beautiful.arr_bg_agrey)
 arr2 = widget ({type = "imagebox" })
-arr2.image = image(beautiful.arr_grey_purple)
+arr2.image = image(beautiful.arr_agrey_orange)
 arr3 = widget ({type = "imagebox" })
-arr3.image = image(beautiful.arr_purple_dgreen)
+arr3.image = image(beautiful.arr_orange_lblue)
 arr4 = widget ({type = "imagebox" })
-arr4.image = image(beautiful.arr_dgreen_bg)
-arr5 = widget ({type = "imagebox" })
-arr5.image = image(beautiful.arr5)
-arr6 = widget ({type = "imagebox" })
-arr6.image = image(beautiful.arr6)
-arr7 = widget ({type = "imagebox" })
-arr7.image = image(beautiful.arr7)
+arr4.image = image(beautiful.arr_lblue_bg)
 arr8 = widget ({type = "imagebox" })
-arr8.image = image(beautiful.arr_grey_bg)
-arr9 = widget ({type = "imagebox" })
-arr9.image = image(beautiful.arr9)
-arr0 = widget ({type = "imagebox" })
-arr0.image = image(beautiful.arr0)
-arrtbg = widget ({type = "imagebox" })
-arrtbg.image = image(beautiful.arrtbg)
+arr8.image = image(beautiful.arr_agrey_bg)
 spr = widget({ type = "textbox" })
 spr.text = ' ' 
 
@@ -243,6 +231,7 @@ s == 1 and tempbox or nil,
 s == 1 and arr3 or nil,
 s == 1 and songbox or nil,
 s == 1 and arr4 or nil,
+spr,
 mytasklist[s],
 layout = awful.widget.layout.horizontal.rightleft
 }

@@ -9,18 +9,17 @@ theme = {}
 
 theme.green = "#7fb219"
 theme.dgreen = "#4b696d"
-theme.cyan  = "#7f4de6"
 theme.red   = "#e04613"
-theme.lblue = "#6c9eab"
+theme.lblue = "#6d81ca"
 theme.dblue = "#00ccff"
 theme.black = "#3f3f3f"
 theme.lgrey = "#d2d2d2"
 theme.dgrey = "#333333"
+theme.agrey = "#535d6c"
 theme.grey  = "#777e76"
 theme.white = "#ffffff"
-theme.sand = "#c2c2a4"
-theme.turquoise = "#92B0A0"
 theme.purple = "#4b3b51"
+theme.orange = "#d88005"
 
 --theme.awful_widget_height = 14
 --theme.awful_widget_margin_top = 2
@@ -82,6 +81,11 @@ theme.arr_grey_red = themes_dir .. "/arrowed/icons/arrow_grey_red.png"
 theme.arr_grey_purple = themes_dir .. "/arrowed/icons/arrow_grey_purple.png"
 theme.arr_purple_dgreen = themes_dir .. "/arrowed/icons/arrow_purple_dgreen.png"
 theme.arr_dgreen_bg = themes_dir .. "/arrowed/icons/arrow_dgreen_bg.png"
+theme.arr_lblue_bg = themes_dir .. "/arrowed/icons/arrow_lblue_bg.png"
+theme.arr_orange_lblue = themes_dir .. "/arrowed/icons/arrow_orange_lblue.png"
+theme.arr_agrey_orange = themes_dir .. "/arrowed/icons/arrow_agrey_orange.png"
+theme.arr_agrey_bg = themes_dir .. "/arrowed/icons/arrow_agrey_bg.png"
+theme.arr_bg_agrey = themes_dir .. "/arrowed/icons/arrow_bg_agrey.png"
 
 -- Define the image to load
 theme.titlebar_close_button_normal = "/usr/share/awesome/themes/default/titlebar/close_normal.png"
