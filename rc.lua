@@ -11,6 +11,7 @@ require("debian.menu")
 -- for run once
 require("lfs") 
 require("whiteclock")
+local scratch = require("scratch")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -131,6 +132,12 @@ songbox = widget({ type = "textbox", name = "songbox"})
 songbox.text = '<span color="#ffffff">■ </span>'
 songbox.bg = beautiful.lblue
 
+wifikbd = widget({ type = "imagebox" })
+wifikbd.image = image(awful.util.getdir("config") .. "/wifikbd.png")
+wifikbd:buttons(awful.util.table.join(
+   awful.button({ }, 1, function () scratch.drop("wifikeyboard", "top", "left", 110, 110) end)
+))
+
 arr1 = widget ({type = "imagebox" })
 arr1.image = image(beautiful.arr_bg_agrey)
 arr2 = widget ({type = "imagebox" })
@@ -224,6 +231,7 @@ arr1,
 mytextclock,
 arr8,
 s == 1 and spr or nil,
+s == 1 and wifikbd or nil, 
 s == 1 and mysystray or nil, 
 s == 1 and arr1 or nil,
 s == 1 and updatebox or nil,
@@ -254,6 +262,7 @@ awful.key({                   }, "XF86AudioPlay", function () awful.util.spawn("
 awful.key({                   }, "XF86AudioStop", function () awful.util.spawn("gmusicbrowser -cmd Stop") end ),
 awful.key({                   }, "XF86AudioNext", function () awful.util.spawn("gmusicbrowser -cmd NextSong") end ),
 awful.key({                   }, "XF86AudioPrev", function () awful.util.spawn("gmusicbrowser -cmd PrevSong") end ),
+awful.key({                   }, "XF86WLAN", function ()  scratch.drop("wifikeyboard", "top", "left", 110, 110) end),
 -- awesome default bindings
 awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
 awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
